@@ -6,6 +6,10 @@ module.exports = {
       colors: {
         customGray: '#1C1F26',
       },
+      fontFamily: {
+        poppins: ['Poppins', 'sans-serif'],
+      },
+      
     },
   },
   plugins: [],
