@@ -8,36 +8,51 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
       <link rel="stylesheet" href="./styles/tailwind.css">
+      <link rel="stylesheet" href="./styles/styles.css">
   </head>
 <body class="font-sans">
-  <header class="bg-white border-t-[1px] border-b-[1px] border-black mt-8 mb-8 px-4 md:px-28 py-3">
-    <div class="container mx-auto flex items-center justify-between">
-      
+  <header class="bg-white border-t-[1px] border-b-[1px] border-black mt-8 mb-8">
+    <div class="container mx-auto px-4 md:px-28 py-3 flex items-center justify-between">
+      <!-- Logo with responsive sizing -->
       <img src="../images/image.png" alt="Logo" class="h-12 w-auto md:h-10 p-2 md:p-1">
+  
       <button id="menu-button" aria-expanded="false" aria-controls="mobile-menu" class="md:hidden text-customGray focus:outline-none">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-8 w-8">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
         </svg>
       </button>
-      
-
-      
-      <nav class="hidden md:flex space-x-8 text-customGray">
-        <a href="../Index.html" class="hover:text-green-600 text-[18px] font-medium px-6">OUR ETHOS</a>
-        <a href="invesment.html" class="hover:text-green-600 text-[18px] font-medium px-6">OUR INVESTMENT</a>
-        <a href="team.html" class="hover:text-green-600 text-[18px] font-medium px-6">OUR TEAM</a>
-        <a href="stories.html" class="hover:text-green-600 text-[18px] font-medium px-6">OUR STORIES</a>
+  
+      <!-- Desktop Navigation -->
+      <!-- Desktop Navigation for team.html -->
+      <nav class="hidden md:flex space-x-20 text-customGray md:mx-20">
+        <a href="../index.html" class="text-[18px] font-light relative">
+          <div id="ethos-animation" class="absolute left-[-40px] top-[-65px] w-40 h-40"></div> <!-- Lottie container with negative top and left -->
+          Our Ethos
+        </a>
+        <a href="./investment.html" class="text-[18px] font-light relative">
+          <div id="investment-animation" class="absolute left-[-40px] top-[-80px] w-48 h-48"></div> <!-- Lottie container with negative top and left -->
+          Our Investment
+        </a>
+        <a href="./team.html" class="text-[18px] font-light relative">
+          <div id="team-animation" class="absolute left-[-40px] top-[-65px] w-40 h-40"></div> <!-- Lottie container with negative top and left -->
+          Our Team
+        </a>
+        <a href="./stories.html" class="text-[18px] font-light relative">
+          <div id="stories-animation" class="absolute left-[-40px] top-[-65px] w-40 h-40"></div> <!-- Lottie container with negative top and left -->
+          Our Stories
+        </a>
       </nav>
+
     </div>
-
-
+  
+    <!-- Mobile Navigation -->
     <nav id="mobile-menu" class="hidden flex-col space-y-4 mt-4 text-customGray px-8">
-      <a href="../Index.html" class="hover:text-green-600 text-[18px] font-medium block px-6">OUR ETHOS</a>
-      <a href="invesment.html" class="hover:text-green-600 text-[18px] font-medium block px-6">OUR INVESTMENT</a>
-      <a href="team.html" class="hover:text-green-600 text-[18px] font-medium blockpx-6">OUR TEAM</a>
-      <a href="stories.html" class="hover:text-green-600 text-[18px] font-medium blockpx-6">OUR STORIES</a>
+      <a href="../Index.html" class="hover:text-green-600 text-[18px] font-medium block">Our Ethos</a>
+      <a href="investment.html" class="hover:text-green-600 text-[18px] font-medium block">Our Investment</a>
+      <a href="team.html" class="hover:text-green-600 text-[18px] font-medium block">Our Team</a>
+      <a href="stories.html" class="hover:text-green-600 text-[18px] font-medium block">Our Stories</a>
     </nav>
-</header>
+  </header>
 
 <script>
   const menuButton = document.getElementById('menu-button');
@@ -51,8 +66,8 @@
 </script>
 
       <main class="container mx-auto px-2 sm:px-2 md:px-6 lg:px-8 xl:px-10 py-6">
-        <section class="text-center mb-12 px-10 py-20 font-poppins">
-          <h2 class="text-[32px] sm:text-[34px] md:text-[34px] lg:text-[50px] tracking-wide mb-4 py-16 leading-[1.1] sm:leading-[1.15] md:leading-[1.2] lg:leading-[1.25]">
+        <section class="text-center mb-12 px-10  font-poppins">
+          <h2 class="text-[32px] sm:text-[34px] md:text-[34px] lg:text-[50px] tracking-wide mb-4 py-16 leading-[1.1] sm:leading-[1.15] md:leading-[1.2] lg:leading-[1.25] font-light">
             Our dynamic team
             <div class="h-1 w-full mx-auto mb-8">
               <img src="../images/under_line.png" alt="Underline" class="mx-auto w-[60%] sm:w-[20%] md:w-[25%] lg:w-[35%]">
@@ -63,13 +78,12 @@
         
 
 
-        <section class="flex flex-col md:flex-row items-stretch gap-8 mb-12 py-6 px-[15px] md:px-[65px]" style="font-family: 'Jost', sans-serif;">
+        <section class="flex flex-col md:flex-row items-stretch gap-8 mb-12 py-6 px-[15px] md:px-[65px] font-poppins">
             <div class="flex-1 text-left flex flex-col justify-between h-full border-t border-b border-black py-4">
-              <p class="text-[28px] text-customGray  font-normal">
+              <p class="text-[24px] text-customGray font-light  border-black py-4 font-poppins">
                 Our focus is to actively champion new generations of thinkers and doers. We genuinely believe that the next big idea could come from anyone, regardless of background or experience.
-              </p>
-              <br>
-              <p class="text-[28px] text-customGray  font-normal">
+                <br>
+                <br>
                 Our team comprises of individuals who have run multimillion-dollar companies as the founder and CEO as well as individuals who have held executive leadership
                 positions at the CXO level and have introduced innovative and customized services and products.
                 Having been in operational roles the team understands challenges on ground as well as challenges in fund raising and deployment.
@@ -116,5 +130,10 @@
           </div>
         </div>
       </footer>
+ <!-- Link to the Lottie Web Library -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.0/lottie.min.js"></script>
+
+ <!-- Link to Your Custom JavaScript File -->
+ <script src="js/animations.js"></script>      
 </body>
 </html>

@@ -8,10 +8,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
     <link rel="stylesheet" href="./styles/tailwind.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+
+
+    
 </head>
 <body  >
-  <header class="bg-white border-t-[1px] border-b-[1px] border-black mt-8 mb-8 px-4 md:px-28 py-3">
-    <div class="container mx-auto flex items-center justify-between">
+  <header class="bg-white border-t-[1px] border-b-[1px] border-black mt-8 mb-8">
+    <div class="container mx-auto px-4 md:px-28 py-3 flex items-center justify-between">
       <!-- Logo with responsive sizing -->
       <img src="./images/image.png" alt="Logo" class="h-12 w-auto md:h-10 p-2 md:p-1">
   
@@ -20,24 +25,40 @@
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
         </svg>
       </button>
-      
+  
       <!-- Desktop Navigation -->
-      <nav class="hidden md:flex space-x-8 text-customGray">
-        <a href="./Index.html" class="hover:text-green-600 text-[18px] font-medium px-6">OUR ETHOS</a>
-        <a href="./html/invesment.html" class="hover:text-green-600 text-[18px] font-medium px-6">OUR INVESTMENT</a>
-        <a href="./html/team.html" class="hover:text-green-600 text-[18px] font-medium px-6">OUR TEAM</a>
-        <a href="./html/stories.html" class="hover:text-green-600 text-[18px] font-medium px-6">OUR STORIES</a>
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex space-x-20 text-customGray md:mx-20">
+        <a href="./index.html" class="text-[18px] font-light relative" id="ethos-link">
+          <div id="ethos-animation" class="absolute left-[-40px] top-[-65px] w-40 h-40"></div> <!-- Lottie container -->
+          Our Ethos
+        </a>
+        <a href="./html/investment.html" class="text-[18px] font-light relative" id="investment-link">
+          <div id="investment-animation" class="absolute left-[-40px] top-[-80px] w-48 h-48"></div> <!-- Lottie container -->
+          Our Investment
+        </a>
+        <a href="./html/team.html" class="text-[18px] font-light relative" id="team-link">
+          <div id="team-animation" class="absolute left-[-40px] top-[-65px] w-40 h-40"></div> <!-- Lottie container -->
+          Our Team
+        </a>
+        <a href="./html/stories.html" class="text-[18px] font-light relative" id="stories-link">
+          <div id="stories-animation" class="absolute left-[-40px] top-[-65px] w-40 h-40"></div> <!-- Lottie container -->
+          Our Stories
+        </a>
       </nav>
+
+
     </div>
   
     <!-- Mobile Navigation -->
     <nav id="mobile-menu" class="hidden flex-col space-y-4 mt-4 text-customGray px-8">
-      <a href="./Index.html" class="hover:text-green-600 text-[18px] font-medium block px-6">OUR ETHOS</a>
-      <a href="./html/invesment.html" class="hover:text-green-600 text-[18px] font-medium block px-6">OUR INVESTMENT</a>
-      <a href="./html/team.html" class="hover:text-green-600 text-[18px] font-medium block px-6">OUR TEAM</a>
-      <a href="./html/stories.html" class="hover:text-green-600 text-[18px] font-medium block px-6">OUR STORIES</a>
+      <a href="./Index.html" class="hover:text-green-600 text-[18px] font-medium block">Our Ethos</a>
+      <a href="./html/investment.html" class="hover:text-green-600 text-[18px] font-medium block">Our Investment</a>
+      <a href="./html/team.html" class="hover:text-green-600 text-[18px] font-medium block">Our Team</a>
+      <a href="./html/stories.html" class="hover:text-green-600 text-[18px] font-medium block">Our Stories</a>
     </nav>
   </header>
+  
   
   <script>
     const menuButton = document.getElementById('menu-button');
@@ -51,11 +72,11 @@
   </script>
   
 
-  <main class="container mx-auto px-2 sm:px-2 md:px-6 lg:px-8 xl:px-10 py-6">
+  <main class="container mx-auto px-2 sm:px-2 md:px-6 lg:px-8 xl:px-10 py-6 md:grid-cols-3">
     
  
-    <section class="text-center mb-12 px-10 py-20 font-poppins">
-  <h2 class="text-[32px] sm:text-[34px] md:text-[34px] lg:text-[50px] tracking-wide mb-4 py-16 leading-[1.1] sm:leading-[1.15] md:leading-[1.2] lg:leading-[1.25]">
+    <section class="text-center mb-12 px-10 py-18 font-poppins font-light">
+  <h2 class="text-[32px] sm:text-[34px] md:text-[34px] lg:text-[50px] tracking-wide mb-4 py-16 leading-[1.1] sm:leading-[1.15] md:leading-[1.2] lg:leading-[1.25] mx-2 md:mx-52">
     We transform your ideas into extraordinary business ventures
     <div class="h-1 w-full mx-auto mb-8">
       <img src="./images/under_line.png" alt="Underline" class="mx-auto w-[60%] sm:w-[50%] md:w-[40%] lg:w-[60%]">
@@ -63,101 +84,103 @@
   </h2>
 </section>
 
-<section class="font-poppins font-light flex flex-col md:flex-row gap-8 mb-12 py-6 sm:py-4 px-4 sm:px-6 md:px-[80px]">
-  <div class="flex-1 min-h-[300px] p-2 sm:p-2">
-    <h3 class="text-[30px] font-normal border-t border-b border-black tracking-wide mb-4 py-4 leading-[1.2]">
+<section class="font-poppins font-light flex flex-col md:flex-row items-center gap-8 mb-12 py-6 sm:py-4 px-4 sm:px-6 md:px-[80px]">
+  <div class="flex-1 p-2 sm:p-2">
+    <h3 class="text-[30px] border-t border-b border-black tracking-wide mb-4 py-4 leading-[1.2] font-light">
       Our founders: the mavericks and visionaries
     </h3>
-    <p class="text-[24px] text-customGray font-light">
+    <p class="text-[24px] text-customGray font-light border-b border-black py-8">
       Our founders are mavericks, visionaries, the risk-takers, and the change-makers who dare to defy convention and chart their own path. They are not just entrepreneurs; they are revolutionaries who challenge the status quo, break boundaries, and inspire others to think differently. Their journeys are defined by bold decisions, unconventional ideas, and a deep belief in the power of innovation and creativity.
     </p>
   </div>
-  <div class="flex-1 min-h-[300px] flex items-center justify-center">
-    <img src="./images/WEB_IMAGE_100_BUCKS_01.png" alt="Visionary" class="w-full h-full object-contain" />
+  <div class="flex-1 flex items-center justify-center">
+    <img src="./images/WEB_IMAGE_100_BUCKS_01.png" alt="Visionary" class="w-[482px] h-[418px] object-contain"/>
   </div>
 </section>
 
+
+
 <section class="flex flex-col md:flex-row gap-8 mb-12 py-6 sm:py-8 px-4 sm:px-6 md:px-[80px]">
   <div class="flex-1 min-h-[300px] p-2 sm:p-2">
-    <h3 class="text-[30px] font-normal border-t border-b border-black tracking-wide mb-4 py-4 leading-[1.2]">
+    <h3 class="text-[30px] font-light border-t border-b border-black tracking-wide mb-4 py-4 leading-[1.2]">
       Turning obstacles into opportunities
     </h3>
-    <p class="text-[24px] text-customGray font-light">
+    <p class="text-[24px] text-customGray font-light border-b border-black py-8">
       We spot opportunities where others see obstacles and embrace the unknown with fearless determination. We like ideas that are disruptive and have the potential to transform entire markets or even create new ones. We come from diverse social and economic backgrounds and understand the struggles of creating economic and social value from an idea. Our hope is to inspire a generation of entrepreneurs to aim high and think big, irrespective of their position today.
     </p>
   </div>
   <div class="flex-1 min-h-[300px] flex items-center justify-center">
-    <img src="./images/WEB_IMAGE_100_BUCKS_02.png" alt="Visionary" class="w-full h-full object-contain" />
+    <img src="./images/WEB_IMAGE_100_BUCKS_02.png" alt="Visionary" class="w-[482px] h-[443px] object-contain" />
   </div>
 </section>
 
 <section class="flex flex-col md:flex-row gap-8 mb-12 py-6 sm:py-8 px-4 sm:px-6 md:px-[80px]">
   <div class="flex-1 min-h-[300px] p-2 sm:p-2">
-    <h3 class="text-[30px] font-normal border-t border-b border-black tracking-wide mb-4 py-4 leading-[1.2]">
+    <h3 class="text-[30px] font-light border-t border-b border-black tracking-wide mb-4 py-4 leading-[1.2]">
       Fostering creativity and thinking
     </h3>
-    <p class="text-[24px] text-customGray font-light">
+    <p class="text-[24px] text-customGray font-light border-b border-black py-8">
       The small team thrives on fostering creativity and unconventional thinking. We understand that in order to create something truly groundbreaking, ideas must be encouraged that defy traditional frameworks. Our founders believe in what Steve Jobs said: “Innovation distinguishes between a leader and a follower.” By focusing on design, simplicity, and user experience, we are able to create products that will revolutionize the industry we choose as our playground.
     </p>
   </div>
   <div class="flex-1 min-h-[300px] flex items-center justify-center">
-    <img src="./images/WEB_IMAGE_100_BUCKS_03.png" alt="Visionary" class="w-full h-full object-contain" />
+    <img src="./images/WEB_IMAGE_100_BUCKS_03.png" alt="Visionary" class="w-[482px] h-[490px] object-contain" />
   </div>
 </section>
 
 <section class="flex flex-col md:flex-row gap-8 mb-12 py-6 sm:py-8 px-4 sm:px-6 md:px-[80px]">
   <div class="flex-1 min-h-[300px] p-2 sm:p-2">
-    <h3 class="text-[30px] font-normal border-t border-b border-black tracking-wide mb-4 py-4 leading-[1.2]">
+    <h3 class="text-[30px] font-light border-t border-b border-black tracking-wide mb-4 py-4 leading-[1.2]">
       Building communities that dream big
     </h3>
-    <p class="text-[24px] text-customGray font-light">
+    <p class="text-[24px] text-customGray font-light border-b border-black py-8">
       The hallmark of our founders is not just their success but their ability to inspire and empower others to follow their dreams. We don’t just build companies—we build communities of people who are motivated to push boundaries alongside us. We mentor and motivate countless individuals to pursue their passions, no matter how unconventional.
     </p>
   </div>
   <div class="flex-1 min-h-[300px] flex items-center justify-center">
-    <img src="./images/WEB_IMAGE_100_BUCKS_04.png" alt="Visionary" class="w-full h-full object-contain" />
+    <img src="./images/WEB_IMAGE_100_BUCKS_04.png" alt="Visionary" class="w-[482px] h-[380px] object-contain" />
   </div>
 </section>
 
 <section class="flex flex-col md:flex-row gap-8 mb-12 py-6 sm:py-8 px-4 sm:px-6 md:px-[80px]">
   <div class="flex-1 min-h-[300px] p-2 sm:p-2">
-    <h3 class="text-[30px] font-normal border-t border-b border-black tracking-wide mb-4 py-4 leading-[1.2]">
+    <h3 class="text-[30px] font-light border-t border-b border-black tracking-wide mb-4 py-4 leading-[1.2]">
       Failure: a stepping stone to success
     </h3>
-    <p class="text-[24px] text-customGray font-light">
+    <p class="text-[24px] text-customGray font-light border-b border-black py-8">
       For us, failure is not a setback but an essential part of the journey to success. We redefine failure as a stepping stone to growth and encourage others to embrace it as a learning opportunity. Jeff Bezos says, “Failure and invention are inseparable twins.” We absolutely stand by the statement and encourage entrepreneurs to learn from their mistakes, iterate, and keep moving forward.
     </p>
   </div>
   <div class="flex-1 min-h-[300px] flex items-center justify-center">
-    <img src="./images/WEB_IMAGE_100_BUCKS_05.png" alt="Visionary" class="w-full h-full object-contain" />
+    <img src="./images/WEB_IMAGE_100_BUCKS_05.png" alt="Visionary" class="w-[497px] h-[380px]  object-contain" />
   </div>
 </section>
 
 <section class="flex flex-col md:flex-row gap-8 mb-12 py-6 sm:py-8 px-4 sm:px-6 md:px-[80px]">
   <div class="flex-1 min-h-[300px] p-2 sm:p-2">
-    <h3 class="text-[30px] font-normal border-t border-b border-black tracking-wide mb-4 py-4 leading-[1.2]">
+    <h3 class="text-[30px] font-light border-t border-b border-black tracking-wide mb-4 py-4 leading-[1.2]">
       Beyond profits: creating lasting change
     </h3>
-    <p class="text-[24px] text-customGray font-light">
+    <p class="text-[24px] text-customGray font-light border-b border-black py-8">
       Who does not like profits? We genuinely do, but we aren’t just interested in profits—we want to create lasting change. The team believes that business success can be intertwined with a larger, global mission to make a difference.
     </p>
   </div>
   <div class="flex-1 min-h-[300px] flex items-center justify-center">
-    <img src="./images/WEB_IMAGE_100_BUCKS_06.png" alt="Visionary" class="w-full h-full object-contain" />
+    <img src="./images/WEB_IMAGE_100_BUCKS_06.png" alt="Visionary" class="w-[472px] h-[300px] object-contain" />
   </div>
 </section>
 
 <section class="flex flex-col md:flex-row gap-8 mb-12 py-6 sm:py-8 px-4 sm:px-6 md:px-[80px]">
   <div class="flex-1 min-h-[300px] p-2 sm:p-2">
-    <h3 class="text-[30px] font-normal border-t border-b border-black tracking-wide mb-4 py-4 leading-[1.2]">
+    <h3 class="text-[30px] font-light border-t border-b border-black tracking-wide mb-4 py-4 leading-[1.2]">
       Inspiring the next generation of innovators
     </h3>
-    <p class="text-[24px] text-customGray font-light">
+    <p class="text-[24px] text-customGray font-light border-b border-black py-8">
       Our focus is to actively champion new generations of thinkers and doers. We genuinely believe that the next big idea could come from anyone, regardless of background or experience.
     </p>
   </div>
   <div class="flex-1 min-h-[300px] flex items-center justify-center">
-    <img src="./images/WEB_IMAGE_100_BUCKS_07.png" alt="Visionary" class="w-full h-full object-contain" />
+    <img src="./images/WEB_IMAGE_100_BUCKS_07.png" alt="Visionary" class="w-[472px] h-[270px]  object-contain" />
   </div>
 </section>
 
@@ -199,6 +222,10 @@
       </div>
     </div>
   </footer>
-  
+  <!-- Link to the Lottie Web Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.0/lottie.min.js"></script>
+
+  <!-- Link to Your Custom JavaScript File -->
+  <script src="js/animations.js"></script>
 </body>
 </html>
