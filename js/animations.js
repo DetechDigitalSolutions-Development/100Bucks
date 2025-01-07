@@ -1,12 +1,17 @@
+document.addEventListener('DOMContentLoaded', function() {
+  // Call the function to initialize Lottie Animations after DOM is loaded
+  initializeLottieAnimations();
+});
+
 // Function to initialize Lottie Animations and set up hover effects
 function initializeLottieAnimations() {
   // Initialize Lottie Animations
   const ethosAnimation = lottie.loadAnimation({
     container: document.getElementById('ethos-animation'),
     renderer: 'svg',
-    loop: false,  // Animation will stop after playing
-    autoplay: false,  // We'll control autoplay via hover events
-    path: 'images/OVEL.json'  // Path to your Lottie JSON animation file
+    loop: false,
+    autoplay: false,
+    path: '../images/OVEL.json'
   });
 
   const investmentAnimation = lottie.loadAnimation({
@@ -14,7 +19,7 @@ function initializeLottieAnimations() {
     renderer: 'svg',
     loop: false,
     autoplay: false,
-    path: 'images/OVEL.json'  // Same animation file for this item
+    path: '../images/OVEL.json'
   });
 
   const teamAnimation = lottie.loadAnimation({
@@ -22,7 +27,7 @@ function initializeLottieAnimations() {
     renderer: 'svg',
     loop: false,
     autoplay: false,
-    path: 'images/OVEL.json'  // Same animation file for this item
+    path: '../images/OVEL.json'
   });
 
   const storiesAnimation = lottie.loadAnimation({
@@ -30,46 +35,36 @@ function initializeLottieAnimations() {
     renderer: 'svg',
     loop: false,
     autoplay: false,
-    path: 'images/OVEL.json'  // Same animation file for this item
+    path: '../images/OVEL.json'
   });
 
   // Function to handle hover events and trigger animation playback
   function setupHoverEffect(linkSelector, animation) {
-    const link = document.querySelector(linkSelector);
+    const links = document.querySelectorAll(linkSelector);
 
-    // Play animation on mouse enter
-    link.addEventListener('mouseenter', () => {
-      animation.play();
-    });
+    links.forEach(link => {
+      // Play animation on mouse enter
+      link.addEventListener('mouseenter', () => {
+        animation.play();
+      });
 
-    // Stop animation on mouse leave
-    link.addEventListener('mouseleave', () => {
-      animation.stop();
+      // Stop animation on mouse leave
+      link.addEventListener('mouseleave', () => {
+        animation.stop();
+      });
     });
   }
 
-  // Set up hover effects for each navigation link
-  setupHoverEffect('a[href="./index.html"]', ethosAnimation);  // Our Ethos
-  setupHoverEffect('a[href="./html/investment.html"]', investmentAnimation);  // Our Investment
-  setupHoverEffect('a[href="./html/team.html"]', teamAnimation);  // Our Team
-  setupHoverEffect('a[href="./html/stories.html"]', storiesAnimation);  // Our Stories
+  // Set up hover effects for each navigation link with href ending in .html
+  setupHoverEffect('a[href$="index.html"]', ethosAnimation);  // For links ending with .html
+  setupHoverEffect('a[href$="investment.html"]', investmentAnimation);  // Specific link for investment
+  setupHoverEffect('a[href$="team.html"]', teamAnimation);  // Specific link for team
+  setupHoverEffect('a[href$="stories.html"]', storiesAnimation);  // Specific link for stories
 
-  // Ensure the animations are only loaded once per page
   window.onload = function() {
-    ethosAnimation.goToAndStop(0, true);  // Ensure the animation is at the first frame initially
+    ethosAnimation.goToAndStop(0, true);
     investmentAnimation.goToAndStop(0, true);
     teamAnimation.goToAndStop(0, true);
     storiesAnimation.goToAndStop(0, true);
   };
-}
-
-// Call the initialize function to set up Lottie Animations
-initializeLottieAnimations();
-
-// Optional: Add an event listener to reset animations on page transitions (if needed for SPA)
-if (window.history.pushState) {
-  window.addEventListener('popstate', function () {
-    // Re-initialize animations each time the user navigates (e.g., going back/forward in browser history)
-    initializeLottieAnimations();
-  });
 }
