@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>100 Bucks - Contact Us</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script> <!-- EmailJS Library -->
+  </head>
+<body class="font-sans"> 
+  <header class="bg-white border-t-[1px] border-b-[1px] border-black mt-8 mb-8">
+    <div class="container mx-auto px-4 lg:px-28 xl:px-36 py-3 flex items-center justify-between">
+      <img src="../images/image.png" alt="Logo" class="h-12 w-auto sm:h-10 md:h-12 lg:h-10 p-1 lg:p-1 ">
+      <button id="menu-button" aria-expanded="false" aria-controls="mobile-menu" class="md:hidden text-customGray focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-8 w-8">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+      </button>
+    
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex space-x-3 lg:space-x-10 text-customGray md:ml-4">
+        <a href="../index.html" class="text-[16px] md:text-[18px] font-light relative" id="ethos-link">
+          <div id="ethos-animation" class="absolute left-[-30px] md:left-[-40px] top-[-50px] md:top-[-60px] w-28 md:w-36 h-28 md:h-36"></div>
+          Our Ethos
+        </a>
+        <a href="./investment.html" class="text-[16px] md:text-[18px] font-light relative" id="investment-link">
+          <div id="investment-animation" class="absolute left-[-30px] md:left-[-35px] top-[-65px] md:top-[-75px] w-36 md:w-44 h-36 md:h-44"></div>
+          Our Investment
+        </a>
+        <a href="./team.html" class="text-[16px] md:text-[18px] font-light relative">
+          <div id="team-animation" class="absolute left-[-30px] md:left-[-40px] top-[-50px] md:top-[-60px] w-28 md:w-36 h-28 md:h-36"></div>
+          Our Team
+        </a>
+        <a href="./stories.html" class="text-[16px] md:text-[18px] font-light relative">
+          <div id="stories-animation" class="absolute left-[-30px] md:left-[-40px] top-[-50px] md:top-[-60px] w-28 md:w-36 h-28 md:h-36"></div>
+          Our Stories
+        </a>
+      </nav>
+    </div>
+    
+    <!-- Mobile Navigation -->
+    <nav id="mobile-menu" class="hidden flex-col space-y-4 mt-4 text-customGray px-8">
+      <a href="../Index.html" class="hover:text-green-600 text-[16px] md:text-[18px] font-medium block">Our Ethos</a>
+      <a href="investment.html" class="hover:text-green-600 text-[16px] md:text-[18px] font-medium block">Our Investment</a>
+      <a href="team.html" class="hover:text-green-600 text-[16px] md:text-[18px] font-medium block">Our Team</a>
+      <a href="stories.html" class="hover:text-green-600 text-[16px] md:text-[18px] font-medium block">Our Stories</a>
+    </nav>
+  </header>
+  
+
+<script>
+  const menuButton = document.getElementById('menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  menuButton.addEventListener('click', () => {
+    const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
+    menuButton.setAttribute('aria-expanded', !isExpanded);
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
+<!-- Main Content -->
+<main class="container mx-auto px-2 sm:px-2 md:px-6 lg:px-8 xl:px-10 py-6">
+  <section class="text-center mb-12 px-10 font-poppins">
+    <h2 class="text-[32px] sm:text-[34px] md:text-[34px] lg:text-[50px] tracking-wide mb-4 py-16 leading-[1.1] sm:leading-[1.15] md:leading-[1.2] lg:leading-[1.25] font-light">
+      Contact Us
+      <div class="h-1 w-full mx-auto mb-8">
+        <img src="../images/contact_underline.png" alt="Underline" class="mx-auto w-[60%] sm:w-[20%] md:w-[25%] lg:w-[20%]">
+      </div>
+    </h2>
+  </section>
+
+  
+
+  <section class="font-poppins px-6 md:px-28 mb-8">
+    <hr class="border-t border-black mb-4" style="width: 48%; margin: 0 auto;">
+    <p class="text-[18px] font-light text-customGray text-center leading-tight" style="margin-bottom: 1.0rem; margin-top: 1.2rem;">
+      We’re here to help! Contact us directly for inquiries, support, or collaboration.<br />
+      Let’s make something great together.
+    </p>
+    <hr class="border-t border-black mb-4" style="width: 48%; margin: 0 auto;">
+  </section>
+
+  <!-- Form Section -->
+  <form id="contact-form" method="POST" class="bg-white  rectangular-lg max-w-xl mx-auto p-6">  <!--shadow-lg-->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <!-- First Name -->
+      <div>
+        <label for="firstName" class="block text-lg mb-1">First Name</label>
+        <input type="text" id="firstName" name="firstName" class="w-full px-4 py-2 border border-black rectangular-lg" placeholder="Brian" required>
+      </div>
+      <!-- Last Name -->
+      <div>
+        <label for="lastName" class="block text-lg mb-2">Last Name</label>
+        <input type="text" id="lastName" name="lastName" class="w-full px-4 py-2 border border-black rectangular-lg" placeholder="Clark" required>
+      </div>
+    <!-- Phone -->
+    <div>
+      <label for="phone" class="block text-lg mb-2">Phone</label>
+      <div class="relative flex border border-black rectangular-lg overflow-hidden">
+        <!-- Country Code Dropdown -->
+        <select id="countryCode" name="countryCode" class="px-3 bg-white text-gray-700 focus:outline-none focus:ring-0 border-r border-black" onchange="updatePlaceholder()">
+          <option value="+1" data-placeholder="(123) 456-7890">+1</option>
+          <option value="+44" data-placeholder="01234 567890">+44</option>
+          <option value="+91" data-placeholder="12345 67890">+91</option>
+          <option value="+94" data-placeholder="71 234 5678" selected>+94</option>
+          <option value="+61" data-placeholder="0412 345 678">+61</option>
+          <option value="+81" data-placeholder="090-1234-5678">+81</option>
+        </select>
+        <!-- Phone Input Field -->
+        <input type="tel" id="phone" name="phone" class="flex-grow px-4 py-2 focus:outline-none focus:ring-0" placeholder="071 234 5678" required>
+      </div>
+    </div>
+    
+
+    <script>
+      function updatePlaceholder() {
+        const countryCodeDropdown = document.getElementById("countryCode");
+        const selectedOption = countryCodeDropdown.options[countryCodeDropdown.selectedIndex];
+        const phoneInput = document.getElementById("phone");
+        phoneInput.placeholder = selectedOption.getAttribute("data-placeholder");
+      }
+    </script>
+      <!-- Email -->
+      <div>
+        <label for="email" class="block text-lg mb-2">Email</label>
+        <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-black rectangular-lg" placeholder="example@yourmail.com" required>
+      </div>
+    </div>
+    <!-- Message -->
+    <div class="mt-6">
+      <label for="message" class="block text-lg mb-2">Message</label>
+      <textarea id="message" name="message" rows="5" class="w-full px-4 py-2 border border-black rectangular-lg" placeholder="Type your message here..." required></textarea>
+    </div>
+    <!-- Button -->
+    <div class="text-left mt-6">
+      <button type="submit" class="bg-[#028331] text-white px-10 py-3 rounded-lg font-semibold hover:bg-green-700 shadow-lg transition-transform transform hover:scale-105">
+        Send Message →
+      </button>
+    </div>
+  </form>
+</main>
+
+<footer class="bg-[#028331] text-black py-8" style="font-family: 'Poppins', Poppins;">
+  <div class="container mx-auto flex flex-col md:flex-row justify-between items-start md:items-center px-6">
+    <div class="flex flex-col space-y-2 pl-4 md:pl-8">
+      <a href="../Index.html" class="text-[24px] font-normal hover:underline">Our Ethos</a>
+      <a href="../html/investment.html" class="text-[24px] font-normal hover:underline">Our Investment</a>
+      <a href="../html/team.html" class="text-[24px] font-normal hover:underline">Our Team</a>
+      <a href="../html/stories.html" class="text-[24px] font-normal hover:underline">Our Stories</a>
+      <a href="../html/faq.html" class="text-[24px] font-normal hover:underline">FAQs</a>
+      <a href="../html/contact.html" class="text-[24px] font-normal hover:underline">Contact Us</a>
+    </div>
+    <div class="flex flex-col items-center mt-6 md:mt-0">
+      <img src="../images/Footer.png" alt="Logo" class="h-22 w-64">
+      <p class="text-[20px] font-normal mb-4">Copyrights 100bucks.global</p>
+      <div class="flex space-x-4">
+        <a href="#" class="text-[28px] hover:text-gray-200"><i class="fab fa-youtube"></i></a>
+        <a href="#" class="text-[28px] hover:text-gray-200"><i class="fab fa-facebook"></i></a>
+        <a href="#" class="text-[28px] hover:text-gray-200"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="text-[28px] hover:text-gray-200"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="text-[28px] hover:text-gray-200"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.0/lottie.min.js"></script>
+
+ <!-- Link to Your Custom JavaScript File -->
+ <script src="../js/animations.js"></script>     
+<!-- EmailJS Script -->
+<script>
+  (function() {
+    emailjs.init("Qobbk7nopLVJXnDil"); // Replace with your EmailJS user ID
+  })();
+
+  // Handle form submission
+  const form = document.getElementById('contact-form');
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    // Collect form data
+    const formData = new FormData(form);
+    const formObject = Object.fromEntries(formData);
+
+    // Send email via EmailJS
+    emailjs.send("service_ogo32kd", "template_j9ougim", formObject)
+      .then(function(response) {
+        alert("Message sent successfully!");
+      })
+      .catch(function(error) {
+        alert("Failed to send message. Please try again later.");
+        console.error(error);
+      });
+  });
+</script>
+</body>
+</html>
